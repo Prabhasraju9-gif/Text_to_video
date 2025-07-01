@@ -1,1 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Essential for mobile responsiveness[1][4] -->
+  <title>Prompt to Cinematic Video</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f8f8f8;
+    }
+    .container {
+      max-width: 400px;
+      margin: auto;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 24px;
+    }
+    h1 {
+      font-size: 1.5em;
+      text-align: center;
+    }
+    input, button {
+      width: 100%;
+      font-size: 1.1em;
+      margin-top: 12px;
+      padding: 12px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+    button {
+      background: #007bff;
+      color: #fff;
+      border: none;
+      margin-top: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .instructions {
+      font-size: 0.95em;
+      color: #555;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Cinematic Video Generator</h1>
+    <input type="text" id="prompt" placeholder="Enter your cinematic prompt here">
+    <button onclick="generateVideo()">Generate Video</button>
+    <div class="instructions">
+      This will redirect you to a free AI video tool (like Canva AI or Fliki) to create your video.
+    </div>
+  </div>
+  <script>
+    function generateVideo() {
+      const prompt = document.getElementById('prompt').value.trim();
+      if (!prompt) {
+        alert('Please enter a prompt.');
+        return;
+      }
+      // Example: Redirect to Canva AI (user will paste prompt there)
+      window.open('https://www.canva.com/ai-video-generator/', '_blank');
+      // Or Fliki: window.open('https://fliki.ai/', '_blank');
+    }
+  </script>
+</body>
+</html>
 
